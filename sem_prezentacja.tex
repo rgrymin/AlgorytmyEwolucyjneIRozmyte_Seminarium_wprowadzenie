@@ -21,19 +21,70 @@
 }
 
 \section{Wprowadzenie}
+\subsection{Dlaczego odwrócone wahadło}
 \begin{frame}{Dlaczego odwrócone wahadło?}
-
+	\only<1>{
+		\begin{figure}[!htp]
+			\includegraphics[width=0.5\textwidth]{img/balans1}
+			\caption{Robot balansujący ,,KOSMOS'' zbudowany w Kole Naukowym Robotyków KoNaR
+			na wydziale Elektroniki Politechniki Wrocławskiej}
+		\end{figure}
+	}
+	\only<2->{
+		\begin{itemize}
+			\item TODO
+		\end{itemize}
+	}
 \end{frame}
 
 \section{Model odwróconego wahadła}
-\begin{frame}{Model dynamiki}
+\begin{frame}[allowframebreaks]{Model dynamiki}
+  \begin{align} \nonumber
+    Q_w(q)\ddot{q}+
+    \begin{bmatrix}
+      Q_k && 0 \\
+      0   && 0
+    \end{bmatrix}
+    \ddot{q}+
+    Q_s(q)\ddot{q}
+    +C_w(q, \dot{q})
+    \dot{q}+C_k(q, \dot{q})\dot{q}\\ \nonumber 
+    +C_s(q, \dot{q})\dot{q}
+    +T(q)\dot{q}+D(q)=A^T(q)+Bu
+  \end{align}, gdzie:
+  \begin{description}
+  	\item[$q=(x, y, \Theta, \phi_1, \phi_2, \alpha )^T$] --- wektor zmiennych stanu,
+  	\item[$Q_w(q)$] --- macierz bezwładności wahadła,
+  	\item[$Q_k$] --- macierz bezwładności kół,
+  	\item[$Q_s$] --- macierz bezwładności silników,
+  	\item[$C_w(q, \dot{q})$] --- macierz Coriolisa wahadła,
+  	\item[$C_k(q, \dot{q})$] --- macierz Coriolisa kół,
+  	\item[$C_s(q, \dot{q})$] --- macierz Coriolisa silników,
+  	\item[$T$]               --- macierz tarcia pochodząca od silników,
+  	\item[$D(q)$]            --- wektor grawitacji.
+  \end{description}
+  
 \end{frame}
 
 \begin{frame}{Model kinematyki}
+	\begin{align}
+	  \nonumber
+		K_w = -\frac{1}{6}Ml^2(-3\dot{x}^2 +3\dot{\theta}\dot{x} l \sin{\theta}\sin{\alpha}
+		-3\dot{\alpha}\dot{x}l \cos{\theta} \cos{\alpha} - \dot{\theta}^2l^2+\\
+	  \nonumber
+	    +\dot{\theta}^2 l^2 \cos{\alpha^2} - 3\dot{y}^2 -
+	    3 \dot{\theta}\dot{y}l\cos{\theta}\sin{\alpha} - 3 \dot{\alpha}\dot{y}l
+	    \sin{\theta}\cos{\alpha}-\dot{\alpha}^2
+		)
+	\end{align}
+	\begin{figure}
+		\includegraphics[width=0.48\textwidth]{img/wahadlo}
+		\caption{Odwrócone wahadło na kołach --- robot balansujący}
+	\end{figure}
 \end{frame}
 
 \section{Problem sterowania}
-\begin{frame}{Przegląd mozliwych rozwiązań}
+\begin{frame}{Przegląd możliwych rozwiązań}
 \end{frame}
 
 
