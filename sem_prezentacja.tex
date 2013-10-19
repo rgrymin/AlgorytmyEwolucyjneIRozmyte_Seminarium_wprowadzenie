@@ -1,0 +1,56 @@
+\input{preamble}
+
+
+\begin{document}
+% \usebackgroundtemplate{\includegraphics[width=\paperwidth]{img/bg.jpg}}
+\frame{\titlepage}
+
+% Przebieg prezentacji
+\begin{frame}
+  \frametitle{Przebieg prezentacji}
+  \tableofcontents
+\end{frame}
+
+% The following causes the table of contents to be shown 
+% at the beginning of every subsection. Delete this, if you do not want it.
+\AtBeginSubsection[]{
+  \frame<beamer>{
+    \frametitle{Przebieg prezentacji}
+    \tableofcontents[currentsection,currentsubsection]
+  }
+}
+
+\section{Wprowadzenie}
+\begin{frame}{Dlaczego odwrócone wahadło?}
+
+\end{frame}
+
+\section{Model odwróconego wahadła}
+\begin{frame}{Model dynamiki}
+\end{frame}
+
+\begin{frame}{Model kinematyki}
+\end{frame}
+
+\section{Problem sterowania}
+\begin{frame}{Przegląd mozliwych rozwiązań}
+\end{frame}
+
+
+
+\section{Podsumowanie}
+
+
+
+
+\section{}
+\begin{frame}
+  \begin{center}
+    \huge
+    Dziękujemy za uwagę!
+  \end{center}
+ 
+
+\end{frame}
+
+\end{document}
