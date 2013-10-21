@@ -32,7 +32,9 @@
 	}
 	\only<2->{
 		\begin{itemize}
-			\item TODO
+			\item obiekt nieliniowy.
+			\item trudność w sterowaniu.
+			\item Cieszy się dużym zainteresowaniem.
 		\end{itemize}
 	}
 \end{frame}
@@ -78,20 +80,35 @@
 		)
 	\end{align}
 	\begin{figure}
-		\includegraphics[width=0.48\textwidth]{img/wahadlo}
+		\includegraphics[width=0.4\textwidth]{img/wahadlo}
 		\caption{Odwrócone wahadło na kołach --- robot balansujący}
 	\end{figure}
 \end{frame}
 
 \section{Problem sterowania}
-\begin{frame}{Przegląd możliwych rozwiązań}
+\begin{frame}{Przegląd możliwych rozwiązań (model zlinearyzowany w położeniu równowagi)}
+Dla modelu zlinearyzowanego w położeniu równowagi można zastosować następujące regulatory.
+	\begin{itemize}
+		\item regulator typu PD, \pause
+		\item regulator typu PID, \pause 
+		\item regulator PID w kaskadzie z innym regulatorem, \pause
+		\item inne rozwiązania.
+	\end{itemize}
 \end{frame}
 
-
-
-\section{Podsumowanie}
-
-
+\section{Budowa robota typu odwrócone wahadło}
+	\begin{frame}{}
+	W celu zbudowania robota typu odwrócone wahadło należy
+	dobrać następujące elementy:
+		\begin{itemize}
+			\item czujniki,   \pause
+			\item napędy,     \pause
+			\item kontrolery napędów,  \pause
+			\item pomiar prędkości obrotowej silników,    \pause
+			\item jednostka centralna,   \pause
+			\item moduł komunikacji.
+		\end{itemize}
+	\end{frame}
 
 
 \section{}
